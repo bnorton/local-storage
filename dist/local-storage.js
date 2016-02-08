@@ -54,8 +54,6 @@ module.exports = accessor;
 },{"./stub":2,"./tracking":3}],2:[function(require,module,exports){
 'use strict';
 
-var ms = {};
-
 function getItem (key) {
   return key in ms ? ms[key] : null;
 }
@@ -78,12 +76,14 @@ function clear () {
   return true;
 }
 
-module.exports = {
+var ms = {
   getItem: getItem,
   setItem: setItem,
   removeItem: removeItem,
   clear: clear
 };
+
+module.exports = ms;
 
 },{}],3:[function(require,module,exports){
 (function (global){

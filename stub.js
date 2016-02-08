@@ -1,7 +1,5 @@
 'use strict';
 
-var ms = {};
-
 function getItem (key) {
   return key in ms ? ms[key] : null;
 }
@@ -24,9 +22,11 @@ function clear () {
   return true;
 }
 
-module.exports = {
+var ms = {
   getItem: getItem,
   setItem: setItem,
   removeItem: removeItem,
   clear: clear
 };
+
+module.exports = ms;
